@@ -1,0 +1,7 @@
+<template name="languageSwitcher">
+    <select class="form-control js-languagePick" data-style="btn-danger">
+            {{#each language in languages}}
+            <option value='{{language.code}}'>{{language.labels.name}}</option>
+            {{/each}}
+        </select>
+</template>

@@ -1,0 +1,20 @@
+div.panel-heading.new-pass
+{
+    background-color: white;
+    color:#e67e22;
+
+}
+#btn-signup
+{
+    width:300px;
+    margin-top: 15px;
+    background-color:#1abe9e;
+  border:#1abe9e 2px solid;
+
+}
+
+#btn-signup:hover
+{
+    background-color: #16a085;
+  border: #16a085 2px solid;
+}

@@ -1,0 +1,52 @@
+.box
+{
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    background-color:white;
+    margin-top:15px;
+    padding:15px;
+    text-align:center;
+    border: white solid 2px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.profile-img
+{
+    display: inline-block;
+    margin:auto; 
+    height:100px;
+    width:100px;
+}
+
+.box.box-list
+{
+    border: none;
+   
+}
+
+h2
+{
+    color: #265d7a;
+    
+}
+
+a.dropdown.toggle.profile-image
+{
+    
+    position: absolute;
+}
+
+.btn.btn-info
+{
+    background-color:#1abe9e;
+  border:#1abe9e 1px solid;
+}
+.btn.btn-info:hover
+{
+    background-color: #16a085;
+  border: #16a085 1px solid;
+}
+

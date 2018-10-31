@@ -1,0 +1,101 @@
+<template name="navBar">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">{{_ "header.brand"}}</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!-- <li>
+                                        <a href="/">{{_ "header.home"}}</a>
+                                    </li> -->
+                    <li>
+                        <a href="#">{{_ "header.requirements"}}</a>
+                    </li>
+                    <li>
+                        <a href="#">{{_ "header.rules"}}</a>
+                    </li>
+                    {{#if isInRole 'admin'}}
+                    <li>
+                        <a href="{{pathFor 'admin.panel'}}">Admin panel</a>
+                    </li>
+                    {{/if}}
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li class="brandsImage">
+                                <img src="/images/Encrypted.png" class="img-responsive" alt="Encrypted">
+                            </li>
+                            <li class="brandsImage">
+                                <img src="/images/Ethereum.png" class="img-responsive" alt="Encrypted">
+                            </li> -->
+                    <li class="langSwitch">
+                        {{> languageSwitcher}}
+                    </li>
+                    {{#if loggingIn}}
+                    <p class="navbar-text">{{_ "loging.logging"}}</p>
+                    {{else}}
+                    {{#if currentUser}}
+                    <li>
+                        <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown">
+                            <img src="{{#if user.profile.profileImage}}{{user.profile.profileImage}}{{else}}http://placehold.it/30x30{{/if}}"
+                                style="width: 30px; height: 30px;" class="img-circle">
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="text-center">
+                                <a href="/user/{{user.username}}">
+                                    <button type="button" class="btn btn-default btn-sm" id="Logout">
+                                        <span class="glyphicon glyphicon-user"></span> Profile
+                                    </button>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="text-center">{{> logout}}</li>
+                        </ul>
+                    </li>
+                    {{else}}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> {{_
+                                "loging.login"}}
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                                {{> login}}
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <p>{{_ "header.login.new?"}}
+                                                    <a href="/app/register" tabindex="5" class="forgot-password">
+                                                        <span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span>
+                                                        {{_ "header.login.register"}}.</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    {{/if}}
+                    {{/if}}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- navbar end -->
+
+</template>

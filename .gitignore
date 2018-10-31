@@ -1,0 +1,8 @@
+node_modules
+.vscode
+.DS_Store
+*.log
+Thumbs.db
+settings.json
+development.settings.json
+.deploy

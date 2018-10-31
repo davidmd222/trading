@@ -1,0 +1,117 @@
+<template name="register">
+	<div class="container">
+		<form class="well form-horizontal">
+			<fieldset>
+				<legend>
+					<center>
+						<h2 id="welcome">
+							<b>{{_ "register.title"}}</b>
+							<p>{{_ "register.subtitle"}}</p>
+						</h2>
+					</center>
+				</legend>
+				<br>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.username"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							
+							<input name="username" placeholder="Username" class="form-control" type="text" autocomplete="off" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.firstName"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<input name="name" placeholder="First Name" class="form-control" type="text" autocomplete="off" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.lastName"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							
+							<input name="surname" placeholder="Last Name" class="form-control" type="text" autocomplete="off" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+
+				
+					
+				
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.password"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							
+							<input name="password" placeholder="Password" class="form-control" type="password" autocomplete="off" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.confirmPass"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							
+							<input name="passwordCheck" placeholder="Confirm Password" class="form-control" type="password" autocomplete="off" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.email"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							
+							<input name="email" placeholder="E-Mail Address" class="form-control" type="text" autocomplete="off" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-4 control-label">{{_ "register.birthDay"}}</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+						
+							<input name="birthday" placeholder="Your birthday" class="form-control" type="text" id="birthdayPicker" required disabled="{{loading}}">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+						<label class="col-md-4 control-label">{{_ "register.gender"}}</label>
+						<div class="col-md-4 selectContainer">
+							<div class="input-group">
+								<select name="sex" class="form-control selectpicker" disabled="{{loading}}">
+									<option value="male">{{_ "register.male"}}</option>
+									<option value="female">{{_ "register.female"}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+	
+
+				<div class="form-group">
+					<label class="col-md-4 control-label"></label>
+					<div class="col-md-4">
+						{{#if loading}}
+							<div class="row">
+								{{> loader}}
+							</div>
+						{{/if}}
+						<button type="submit" class="btn btn-info profile" disabled="{{loading}}">{{_ "register.submit"}}
+							<span class="glyphicon glyphicon-send"></span>
+						</button>
+					</div>
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+	<!-- /.container -->
+</template>

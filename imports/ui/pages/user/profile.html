@@ -1,0 +1,51 @@
+<template name="profil">
+	<div class="box">
+		<div class="profile-img">
+	 {{#if user.profile.profileImage}}
+	<img title="{{user.profile.name}}'s image" class="img-circle img-responsive " src="{{user.profile.profileImage}}">
+	 {{else}}
+	<img title="No image of {{user.profile.name}} :(" class="img-circle img-responsive" src="http://www.aryaniwas.com/hotelaryaniwas/files/review/1464429175user.png">
+
+	{{/if}}
+</div>
+<div class="name-profile">
+	<h2>{{user.profile.name}} {{user.profile.surname}}</h2>
+				<!-- <button type="button" class="btn btn-success">{{user.profile.name}}</button> -->
+				{{#if thisUser}}
+				<a href="/user/{{user.username}}/settings">
+					<button type="button" class="btn btn-info">Edit profile</button>
+				</a>
+				{{else}}
+				<button type="button" class="btn btn-info">Send me a message</button>
+				{{/if}}
+				<br>
+			</div>
+				<div class="box box-list">
+					<ul class="list-group profil">
+						<li class="list-group-item text-muted" contenteditable="false">Profile</li>
+						<li class="list-group-item text-right">
+							<span class="pull-left">
+								<strong class="">Joined</strong>
+							</span>{{createdAt}}</li>
+						<li class="list-group-item text-right">
+							<span class="pull-left">
+								<strong class="">Last seen</strong>
+							</span> {{user.profile.lastSeen}}</li>
+						<li class="list-group-item text-right">
+							<span class="pull-left">
+								<strong class="">Full name</strong>
+							</span> {{user.profile.name}} {{user.profile.surname}}
+						</li>
+						<li class="list-group-item text-right">
+							<span class="pull-left">
+								<strong class="">Occupation: </strong>
+							</span>
+							<p>
+								{{user.profile.occupation}}
+							</p>
+						</li>
+					</ul>
+				</div>
+				
+	</div>
+</template>

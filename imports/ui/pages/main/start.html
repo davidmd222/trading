@@ -1,0 +1,39 @@
+<template name="startPage">
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="inner cover">
+          <div id="content">
+            <h1 class="cover-heading">SVOTC</h1>
+            <br>
+            <br>
+            <br>
+            {{#if currentUser}}
+            {{#if registeredCivic}}
+            <div class="container-fluid text-center" id="games">
+              <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="game">
+                  <h3>Awesome, you are registered with Civic.</h3>
+                </div>
+              </div>
+            </div>
+            {{else}}
+            <p class="lead">In order to be on our platform, you will need to create an account with Civic.com. This
+              ensures you are playing against a real person and not a bot. Depending on your country location this
+              provides KYC in order to let you play.</p>
+            <p class="lead"> {{> civicLogin}} </p>
+            {{/if}}
+            {{else}}
+            <div class="steps">
+              <p class=" text-center"> 1. Sign up for a free account </p>
+              <p class=" text-center"> 2. Complete player registration </p>
+              <p class=" text-center"> 3. Become part of SVOTC </p>
+            </div>
+            <a href="/app/register" type="button" class="btn btn-info btnGetStarted">Get Started</a>
+            {{/if }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

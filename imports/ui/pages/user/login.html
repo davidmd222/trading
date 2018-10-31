@@ -1,0 +1,43 @@
+<template name="login">
+	<div class="col-lg-12 login">
+		<div class="text-center">
+			<h3>
+				<img class ="logo" src="/icons/user.png" type="image/png" width="64px" height="64px" >
+			</h3>
+			
+		</div>
+		<form autocomplete="off">
+			<div class="form-group">
+				<input type="text" name="username" class="form-control input-line" placeholder="Username" value="" autocomplete="off" required disabled="{{loading}}"> 
+			</div>
+
+			<div class="form-group">
+				<input type="password" name="password" class="form-control input-line" placeholder="Password" autocomplete="off" required disabled="{{loading}}">
+			</div>
+
+			<div class="form-group">
+				<div class="row">
+				
+					<div class="col-lg-12 text-center">
+						{{#if loading}}
+							<div class="row">
+								{{> loader}}
+							</div>
+						{{/if}}
+						<input type="submit" name="login-submit" class="btn btn-info" value='{{_ "login.loginButton"}}' disabled="{{loading}}">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="text-center">
+							<a href="/forgotPassword" tabindex="5" class="forgot-password" >{{_ "login.forgotten"}}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

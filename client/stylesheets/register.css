@@ -1,0 +1,18 @@
+.well.form-horizontal
+{
+    background-color: unset;
+    border: white solid 2px;
+    color: white;
+}
+legend
+{
+    color:white;
+}
+
+#welcome {
+    color:white;
+}
+
+div.col-md-4.text-left{
+    margin-top:10px;
+}

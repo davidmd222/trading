@@ -1,0 +1,51 @@
+ul.dropdown-lr {
+    width: 300px;
+}
+nav {
+    z-index: 1;
+}
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+.navbar-toggle {
+    z-index:3;
+}
+
+.brandsImage * {
+    height: 60px;
+    padding: 5px;
+}
+
+.langSwitch {
+    text-align: center;
+    padding: 10px 0;
+}
+.langSwitch * {
+    margin: 0 auto;
+}
+@media (max-width: 780px){
+    .brandsImage {
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+    .brandsImage * {
+        height: 120px;
+        padding: 5px;
+    
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .js-languagePick {
+        width: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

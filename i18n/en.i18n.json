@@ -1,0 +1,52 @@
+{
+    "title": "SVOTC",
+    "loging": {
+        "logging": "Logging in...",
+        "login": "Log in",
+        "logout": "Log out"
+    },
+    "header": {
+        "brand": "SVOTC",
+        "home": "Home",
+        "requirements": "Requirements",
+        "rules": "Rules",
+        "login": {
+            "new?": "New here?",
+            "register": "Register"
+        }
+    },
+    "footer": {
+        "copyright": "Copyright "
+    },
+    "login": {
+        "welcome": "Welcome back!",
+        "login": "Login",
+        "loginButton": "Log in",
+        "username": "username",
+        "password": "Password",
+        "remember": "Remember me",
+        "forgotten": "Forgotten password?"
+    },
+    "register": {
+        "title": "Welcome!",
+        "subtitle": "We are very happy to see you here :)",
+        "username": "Username",
+        "firstName": "Name",
+        "lastName": "Surname",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "password": "Password",
+        "confirmPass": "Confirm password",
+        "email": "Email",
+        "birthDay": "Date of birth",
+        "submit": "REGISTER",
+        "notify": {
+            "patience": "Please wait, we are checking your data :)",
+            "usernameError": "Username must be minimum 6, and maximum 26 characters long.",
+            "passwordError": "Password must have minimum 6 characters",
+            "passwordMatchError": "Woops..Passwords do not match..",
+            "registerSuccess": "You are registered successfully! Welcome!"
+        }
+    }
+}
